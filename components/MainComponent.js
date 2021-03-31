@@ -76,7 +76,7 @@ const ContactNavigator = createStackNavigator(
   {
     defaultNavigationOptions: ({ navigation }) => ({
       headerStyle: {
-        backgroundColor: "#5637DD",
+        backgroundColor: "rgba(14,100,168,1)",
       },
       headerTintColor: "#fff",
       headerTitleStyle: {
@@ -151,7 +151,7 @@ const LoginNavigator = createStackNavigator(
   {
     defaultNavigationOptions: ({ navigation }) => ({
       headerStyle: {
-        backgroundColor: "#5637DD",
+        backgroundColor: "rgba(14,100,168,1)",
       },
       headerTintColor: "#fff",
       headerTitleStyle: {
@@ -320,7 +320,6 @@ const MainNavigator = createDrawerNavigator(
     },
   },
   {
-    initialRouteName: "Home",
     drawerBackgroundColor: "#CEC8FF",
     contentComponent: CustomDrawerContentComponent,
   }

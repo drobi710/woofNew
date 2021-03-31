@@ -62,6 +62,11 @@ class LoginTab extends Component {
   render() {
     return (
       <View style={styles.container}>
+        <Image
+          source={require("./images/logo.png")}
+          resizeMode="contain"
+          style={styles.logo}
+        ></Image>
         <Input
           placeholder="Username"
           leftIcon={{ type: "font-awesome", name: "user-o" }}
@@ -89,15 +94,16 @@ class LoginTab extends Component {
           <Button
             onPress={() => this.handleLogin()}
             title="Login"
+            titleStyle={{ color: "black" }}
             icon={
               <Icon
                 name="sign-in"
                 type="font-awesome"
-                color="#fff"
+                color="#000"
                 iconStyle={{ marginRight: 10 }}
               />
             }
-            buttonStyle={{ backgroundColor: "#5637DD" }}
+            buttonStyle={{ backgroundColor: "yellow" }}
           />
         </View>
         <View style={styles.formButton}>
@@ -109,11 +115,11 @@ class LoginTab extends Component {
               <Icon
                 name="user-plus"
                 type="font-awesome"
-                color="blue"
+                color="yellow"
                 iconStyle={{ marginRight: 10 }}
               />
             }
-            titleStyle={{ color: "blue" }}
+            titleStyle={{ color: "yellow" }}
           />
         </View>
       </View>
@@ -300,10 +306,10 @@ const Login = createBottomTabNavigator(
   },
   {
     tabBarOptions: {
-      activeBackgroundColor: "#5637DD",
-      inactiveBackgroundColor: "#CEC8FF",
+      activeBackgroundColor: "rgba(14,100,168,1)",
+      inactiveBackgroundColor: "#3F82B6",
       activeTintColor: "#fff",
-      inactiveTintColor: "#808080",
+      inactiveTintColor: "#3D3F41",
       labelStyle: { fontSize: 16 },
     },
   }
@@ -312,7 +318,9 @@ const Login = createBottomTabNavigator(
 const styles = StyleSheet.create({
   container: {
     justifyContent: "center",
-    margin: 5,
+    padding: 5,
+    flex: 1,
+    backgroundColor: "rgba(18,140,237,1)",
   },
   formIcon: {
     marginRight: 10,
@@ -321,8 +329,9 @@ const styles = StyleSheet.create({
     padding: 0,
   },
   formCheckbox: {
-    margin: 0,
-    backgroundColor: null,
+    bottom: 10,
+    backgroundColor: "transparent",
+    borderWidth: 0,
   },
   formButton: {
     margin: 5,
@@ -339,6 +348,13 @@ const styles = StyleSheet.create({
   image: {
     width: 60,
     height: 60,
+  },
+  logo: {
+    justifyContent: "center",
+    alignItems: "center",
+    right: 15,
+    width: 390,
+    height: 200,
   },
 });
 

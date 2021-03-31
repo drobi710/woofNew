@@ -226,14 +226,11 @@ const CustomDrawerContentComponent = (props) => (
       forceInset={{ top: "always", horizontal: "never" }}
     >
       <View style={styles.drawerHeader}>
-        <View style={{ flex: 1 }}>
+        <View>
           <Image
-            source={require("./images/logo.png")}
+            source={require("./images/woofLogoTransparent.png")}
             style={styles.drawerImage}
           />
-        </View>
-        <View style={{ flex: 2 }}>
-          <Text style={styles.drawerHeaderText}>NuCamp</Text>
         </View>
       </View>
       <DrawerItems {...props} />
@@ -320,7 +317,7 @@ const MainNavigator = createDrawerNavigator(
     },
   },
   {
-    drawerBackgroundColor: "#CEC8FF",
+    drawerBackgroundColor: "rgba(14,100,168,1)",
     contentComponent: CustomDrawerContentComponent,
   }
 );
@@ -396,22 +393,16 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   drawerHeader: {
-    backgroundColor: "#5637DD",
+    backgroundColor: "rgba(18,140,237,1)",
     height: 140,
     alignItems: "center",
     justifyContent: "center",
     flex: 1,
     flexDirection: "row",
   },
-  drawerHeaderText: {
-    color: "#fff",
-    fontSize: 24,
-    fontWeight: "bold",
-  },
   drawerImage: {
-    margin: 10,
-    height: 60,
-    width: 60,
+    height: 100,
+    width: 170,
   },
   stackIcon: {
     marginLeft: 10,

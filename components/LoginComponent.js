@@ -63,7 +63,7 @@ class LoginTab extends Component {
     return (
       <View style={styles.container}>
         <Image
-          source={require("./images/logo.png")}
+          source={require("./images/woofLogoTransparent.png")}
           resizeMode="contain"
           style={styles.logo}
         ></Image>
@@ -138,7 +138,7 @@ class RegisterTab extends Component {
       lastname: "",
       email: "",
       remember: false,
-      imageUrl: baseUrl + "images/logo.png",
+      imageUrl: baseUrl + "images/woofLogoTransparent.png",
     };
   }
   static navigationOptions = {
@@ -225,7 +225,7 @@ class RegisterTab extends Component {
           <View style={styles.imageContainer}>
             <Image
               source={{ uri: this.state.imageUrl }}
-              loadingIndicatorSource={require("./images/logo.png")}
+              loadingIndicatorSource={require("./images/woofLogoTransparent.png")}
               style={styles.image}
             />
             <Button title="Camera" onPress={this.getImageFromCamera} />
@@ -346,8 +346,8 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   image: {
-    width: 60,
-    height: 60,
+    height: 100,
+    width: 100,
   },
   logo: {
     justifyContent: "center",
